@@ -3,11 +3,8 @@ namespace carry0987\TelegramLogin;
 
 class User
 {
-    private $botUsername;
-
-    function __construct($botUsername)
+    public function __construct()
     {
-        $this->botUsername = $botUsername;
     }
 
     private function checkUserData()
@@ -18,11 +15,6 @@ class User
             return $auth_data;
         }
         return false;
-    }
-
-    public function getBotUsername()
-    {
-        return $this->botUsername;
     }
 
     public function getUserData(bool $convert_html_chars = true)

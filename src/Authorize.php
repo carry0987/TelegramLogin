@@ -4,10 +4,21 @@ namespace carry0987\TelegramLogin;
 class Authorize
 {
     private $botToken;
+    private $botUsername;
 
     function __construct($botToken)
     {
         $this->botToken = $botToken;
+    }
+
+    public function setBotUsername($botUsername)
+    {
+        $this->botUsername = $botUsername;
+    }
+
+    public function getBotUsername()
+    {
+        return $this->botUsername;
     }
 
     public function checkAuthorization($auth_data)
