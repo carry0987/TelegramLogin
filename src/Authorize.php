@@ -44,15 +44,4 @@ class Authorize
         }
         return $auth_data;
     }
-
-    public function saveUserData($auth_data)
-    {
-        $auth_data_json = json_encode($auth_data);
-        setcookie('tg_user', $auth_data_json);
-    }
-
-    public function clearUserData()
-    {
-        setcookie('tg_user', '');
-    }
 }
